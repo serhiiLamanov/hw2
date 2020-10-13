@@ -1,0 +1,10 @@
+.random-format-clock{
+    --padding: 1em;
+    color: white;
+    height: calc(100% - 2*var(--padding));
+    text-align: center;
+    padding: var(--padding);
+}
+.clock{
+    font-size: 10vw;
+}

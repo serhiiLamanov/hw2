@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styles from './app.module.css';
 
 export default class extends Component{
-    FORMATS=["toLocaleString","toLocaleDateString","toLocaleTimeString"];
+    FORMATS=["toLocaleString","toLocaleDateString","toLocaleTimeString", "toString"];
     state={
         activeFormat : 0,
         date: new Date(),
@@ -10,7 +10,8 @@ export default class extends Component{
     }
 
     getRandomColor(){
-        return `rgb(${Math.floor(Math.random()*200)},${Math.floor(Math.random()*200)},${Math.floor(Math.random()*200)})`;
+        const randInt = int => Math.floor(Math.random() * int);
+        return `hsl(${randInt(360)},${randInt(100)}%,${randInt(90)}%)`;
     }
 
     click(){
